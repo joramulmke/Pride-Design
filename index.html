@@ -8,6 +8,8 @@
 
     <style>
         
+        /* ROOT PRIDE COLORS */
+        /* change colors here */
         :root {
             --red: red;
             --orange: orange;
@@ -17,17 +19,20 @@
             --purple: purple;
         }
         
-        /* PRIDE BTN HOVER START */
-
+        
+        
+        /* PRIDE BTN HOVER EFFECT */
         a:hover .hoverMe {
             display: inline;
         }
-
         .hoverMe {
             display: none;
         }
 
-        /* PRIDE COLOR START */
+        
+        
+        /* PRIDE COLORS */
+        /* useful for cards, buttons oder NavToggles */
 
         .queerCard {
             background-color: rgba(0, 0, 0, 0);
@@ -77,7 +82,9 @@
         
         
         /* PRIDE UNDERSCORE */
-        .prideUnderscore {
+        /* choose which border-width you want and add this class */
+        .prideUnderscore, 
+        .prideUnderscorePlus {
             border-image: linear-gradient(
                 125deg,
                 var(--red),
@@ -95,67 +102,58 @@
             border-left: 0;
         }
         .prideUnderscorePlus {
-            border-image: linear-gradient(
-                125deg,
-                var(--red),
-                var(--orange),
-                var(--yellow),
-                var(--green),
-                var(--blue),
-                var(--purple)
-            );
-            border-image-slice: 1;
             border-width: 0.2rem;
-            border-style: solid;
-            border-bottom: 0;
-            border-right: 0;
-            border-left: 0;
         }
+        .prideUnderscore {
+            border-width: 0.1rem;
+        }
+        
+        
         
         /* PRIDE SCROLLBAR */
-
         @media (min-width:576px) {
-        ::-webkit-scrollbar {
-            width: 10px;
-        }
-
-        ::-webkit-scrollbar-track {
-        background-color: white;
-        }
-
-        ::-webkit-scrollbar-thumb {
-            border-radius: 3px;
-            background-image: -webkit-gradient(linear,
-            left bottom,
-            left top,
-            color-stop(0.99, red),
-            color-stop(0.80, orange),
-            color-stop(0.64, rgba(256,256,0,0.5)),
-            color-stop(0.48, green),
-            color-stop(0.32, rgba(0,0,256,0.5)),
-            color-stop(0.16, rgba(128,0,128,0.5))        
-            );
-        }
-
-        ::-webkit-scrollbar-thumb:hover {
-            background-image: -webkit-gradient(linear,
-            left bottom,
-            left top,
-            color-stop(0.16, red),
-            color-stop(0.32, orange),
-            color-stop(0.48, rgba(256,256,0,0.5)),
-            color-stop(0.64, green),
-            color-stop(0.80, rgba(0,0,256,0.5)),
-            color-stop(0.99, rgba(128,0,128,0.5))        
-            );
+            ::-webkit-scrollbar {
+                width: 10px;
+            }
+            ::-webkit-scrollbar-track {
+            background-color: white;
+            }
+            ::-webkit-scrollbar-thumb {
+                border-radius: 3px;
+                background-image: -webkit-gradient(linear,
+                left bottom,
+                left top,
+                color-stop(0.99, red),
+                color-stop(0.80, orange),
+                color-stop(0.64, rgba(256,256,0,0.5)),
+                color-stop(0.48, green),
+                color-stop(0.32, rgba(0,0,256,0.5)),
+                color-stop(0.16, rgba(128,0,128,0.5))        
+                );
+            }
+            ::-webkit-scrollbar-thumb:hover {
+                background-image: -webkit-gradient(linear,
+                left bottom,
+                left top,
+                color-stop(0.16, red),
+                color-stop(0.32, orange),
+                color-stop(0.48, rgba(256,256,0,0.5)),
+                color-stop(0.64, green),
+                color-stop(0.80, rgba(0,0,256,0.5)),
+                color-stop(0.99, rgba(128,0,128,0.5))        
+                );
+            }
         }
         
+        /* NON PRIDE RELATED STYLES*/
+        h1 {
+            text-align: center;
         }
-
     </style>
 
 </head>
 <body>
+    <h1 class="PrideUnderscore">Pride Design</h1>
     <a class="queerButton" href="https://joram.eu" rel="noopener noreferrer" target="_blank">Link-Example <span class="hoverMe">🏳️&zwj;🌈</span></a>
 </body>
 </html>
