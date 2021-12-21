@@ -7,7 +7,112 @@
     <title>Pride Design</title>
 
     <style>
-        /* scrollbar */
+        
+        :root {
+            --red: red;
+            --orange: orange;
+            --yellow: yellow;
+            --green: green;
+            --blue: blue;
+            --purple: purple;
+        }
+        
+        /* PRIDE BTN HOVER START */
+
+        a:hover .hoverMe {
+            display: inline;
+        }
+
+        .hoverMe {
+            display: none;
+        }
+
+        /* PRIDE COLOR START */
+
+        .queerCard {
+            background-color: rgba(0, 0, 0, 0);
+            border: 3px solid;
+            border-image-source: linear-gradient(
+                125deg,
+                var(--red),
+                var(--orange),
+                rgba(256, 256, 0, 0.5),
+                var(--green),
+                rgba(0, 0, 256, 0.5),
+                rgba(128, 0, 128, 0.5)
+            );
+            border-image-slice: 1;
+        }
+
+        .queerButton {
+            background: rgba(256, 256, 256, 1);
+            border: 3px solid;
+            border-image-source: linear-gradient(
+                125deg,
+                var(--red),
+                var(--orange),
+                rgba(256, 256, 0, 0.5),
+                var(--green),
+                rgba(0, 0, 256, 0.5),
+                rgba(128, 0, 128, 0.5)
+            );
+            border-image-slice: 1;
+        }
+
+        .queerNavToggle {
+            background: rgba(256, 256, 256, 1);
+            border: 2px solid;
+            border-image-source: linear-gradient(
+                125deg,
+                var(--red),
+                var(--orange),
+                rgba(256, 256, 0, 0.5),
+                var(--green),
+                rgba(0, 0, 256, 0.5),
+                rgba(128, 0, 128, 0.5)
+            );
+            border-image-slice: 1;
+        }
+
+        
+        
+        /* PRIDE UNDERSCORE */
+        .prideUnderscore {
+            border-image: linear-gradient(
+                125deg,
+                var(--red),
+                var(--orange),
+                var(--yellow),
+                var(--green),
+                var(--blue),
+                var(--purple)
+            );
+            border-image-slice: 1;
+            border-width: 0.1rem;
+            border-style: solid;
+            border-top: 0;
+            border-right: 0;
+            border-left: 0;
+        }
+        .prideUnderscorePlus {
+            border-image: linear-gradient(
+                125deg,
+                var(--red),
+                var(--orange),
+                var(--yellow),
+                var(--green),
+                var(--blue),
+                var(--purple)
+            );
+            border-image-slice: 1;
+            border-width: 0.2rem;
+            border-style: solid;
+            border-bottom: 0;
+            border-right: 0;
+            border-left: 0;
+        }
+        
+        /* PRIDE SCROLLBAR */
 
         @media (min-width:576px) {
         ::-webkit-scrollbar {
@@ -51,6 +156,6 @@
 
 </head>
 <body>
-    
+    <a class="queerButton" href="https://joram.eu" rel="noopener noreferrer" target="_blank">Link-Example <span class="hoverMe">🏳️&zwj;🌈</span></a>
 </body>
 </html>
