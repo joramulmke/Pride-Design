@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,93 +8,85 @@
     <title>Pride Design</title>
 
     <style>
-        
         /* ROOT PRIDE COLORS */
         /* change colors here */
         :root {
             --red: red;
             --orange: orange;
-            --yellow: yellow;
+            --yellow: rgba(256, 256, 0, 0.5);
             --green: green;
-            --blue: blue;
-            --purple: purple;
+            --blue: rgba(0, 0, 256, 0.5);
+            --purple: rgba(128, 0, 128, 0.5);
         }
-        
-        
-        
+
+
+
         /* PRIDE BTN HOVER EFFECT */
         a:hover .hoverMe {
             display: inline;
         }
+
         .hoverMe {
             display: none;
         }
 
-        
-        
+
+
         /* PRIDE COLORS */
         /* useful for cards, buttons oder NavToggles */
 
         .queerCard {
             background-color: rgba(0, 0, 0, 0);
             border: 3px solid;
-            border-image-source: linear-gradient(
-                125deg,
-                var(--red),
-                var(--orange),
-                rgba(256, 256, 0, 0.5),
-                var(--green),
-                rgba(0, 0, 256, 0.5),
-                rgba(128, 0, 128, 0.5)
-            );
+            border-image-source: linear-gradient(125deg,
+                    var(--red),
+                    var(--orange),
+                    var(--yellow),
+                    var(--green),
+                    var(--blue),
+                    var(--purple));
             border-image-slice: 1;
         }
 
         .queerButton {
             background: rgba(256, 256, 256, 1);
             border: 3px solid;
-            border-image-source: linear-gradient(
-                125deg,
-                var(--red),
-                var(--orange),
-                rgba(256, 256, 0, 0.5),
-                var(--green),
-                rgba(0, 0, 256, 0.5),
-                rgba(128, 0, 128, 0.5)
-            );
+            border-image-source: linear-gradient(125deg,
+                    var(--red),
+                    var(--orange),
+                    var(--yellow),
+                    var(--green),
+                    var(--blue),
+                    var(--purple));
             border-image-slice: 1;
         }
 
         .queerNavToggle {
             background: rgba(256, 256, 256, 1);
             border: 2px solid;
-            border-image-source: linear-gradient(
-                125deg,
-                var(--red),
-                var(--orange),
-                rgba(256, 256, 0, 0.5),
-                var(--green),
-                rgba(0, 0, 256, 0.5),
-                rgba(128, 0, 128, 0.5)
-            );
+            border-image-source: linear-gradient(125deg,
+                    var(--red),
+                    var(--orange),
+                    var(--yellow),
+                    var(--green),
+                    var(--blue),
+                    var(--purple));
             border-image-slice: 1;
         }
 
-        
-        
+
+
         /* PRIDE UNDERSCORE */
         /* choose which border-width you want and add this class */
-        .prideUnderscore, 
+        .prideUnderscore,
         .prideUnderscorePlus {
-            border-image: linear-gradient(
-                125deg,
-                var(--red),
-                var(--orange),
-                var(--yellow),
-                var(--green),
-                var(--blue),
-                var(--purple)
-            );
+            border-image: linear-gradient(125deg,
+                    var(--red),
+                    var(--orange),
+                    var(--yellow),
+                    var(--green),
+                    var(--blue),
+                    var(--purple));
             border-image-slice: 1;
             border-width: 0.1rem;
             border-style: solid;
@@ -101,59 +94,137 @@
             border-right: 0;
             border-left: 0;
         }
+
         .prideUnderscorePlus {
             border-width: 0.2rem;
         }
+
         .prideUnderscore {
             border-width: 0.1rem;
         }
-        
-        
-        
+
+
+
         /* PRIDE SCROLLBAR */
         @media (min-width:576px) {
             ::-webkit-scrollbar {
                 width: 10px;
             }
+
             ::-webkit-scrollbar-track {
-            background-color: white;
+                background-color: white;
             }
+
             ::-webkit-scrollbar-thumb {
                 border-radius: 3px;
                 background-image: -webkit-gradient(linear,
-                left bottom,
-                left top,
-                color-stop(0.99, red),
-                color-stop(0.80, orange),
-                color-stop(0.64, rgba(256,256,0,0.5)),
-                color-stop(0.48, green),
-                color-stop(0.32, rgba(0,0,256,0.5)),
-                color-stop(0.16, rgba(128,0,128,0.5))        
-                );
+                        left bottom,
+                        left top,
+                        color-stop(0.99, var(--red)),
+                        color-stop(0.80, var(--orange)),
+                        color-stop(0.64, var(--yellow)),
+                        color-stop(0.48, var(--green)),
+                        color-stop(0.32, var(--blue)),
+                        color-stop(0.16, var(--purple)));
             }
+
             ::-webkit-scrollbar-thumb:hover {
                 background-image: -webkit-gradient(linear,
-                left bottom,
-                left top,
-                color-stop(0.16, red),
-                color-stop(0.32, orange),
-                color-stop(0.48, rgba(256,256,0,0.5)),
-                color-stop(0.64, green),
-                color-stop(0.80, rgba(0,0,256,0.5)),
-                color-stop(0.99, rgba(128,0,128,0.5))        
-                );
+                        left bottom,
+                        left top,
+                        color-stop(0.16, var(--red)),
+                        color-stop(0.32, var(--orange)),
+                        color-stop(0.48, var(--yellow)),
+                        color-stop(0.64, var(--green)),
+                        color-stop(0.80, var(--blue)),
+                        color-stop(0.99, var(--purple)));
             }
         }
-        
+
         /* NON PRIDE RELATED STYLES*/
-        h1 {
+        
+        body {
+            font-family: sans-serif;
+            margin: 0;
+        }
+
+        footer {
+            position: absolute;
+            bottom: 0%;
+        }
+
+        main, footer {
+            margin-left: 5%;
+            margin-right: 5%;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        h1, .center {
             text-align: center;
         }
+
+        .queerButton, .queerCard {
+            padding: 5px;
+            margin-top: 25px;
+            margin-bottom: 25px;
+        }
+
+        .queerButton {
+            margin-left: 15px;
+            margin-right:  15px;
+        }
+
     </style>
 
 </head>
+
 <body>
-    <h1 class="PrideUnderscore">Pride Design</h1>
-    <a class="queerButton" href="https://joram.eu" rel="noopener noreferrer" target="_blank">Link-Example <span class="hoverMe">🏳️&zwj;🌈</span></a>
+    <header>
+        <nav class="prideUnderscorePlus"></nav>
+        <h1>Pride Design</h1>
+    </header>
+    <main>      
+        <div class="queerCard">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptate corporis nostrum optio illo
+            odit quaerat officiis asperiores impedit consequuntur praesentium eum error quos expedita beatae in ipsum,
+            dignissimos sint doloremque aspernatur omnis perferendis debitis velit iusto? Vitae sint beatae delectus ipsa, nemo
+            ipsum deleniti, culpa autem ut porro modi dicta illo corrupti minima quis eum nostrum, ipsam et non? Totam ea a
+            perferendis soluta ab corrupti ipsa iure veniam impedit consectetur quisquam optio, quae nihil temporibus unde vitae
+            quibusdam! Quo magnam incidunt cum labore eos, enim obcaecati blanditiis odit, ipsam, veritatis omnis? Quisquam
+            repellendus quam, repellat neque consectetur dignissimos illum saepe exercitationem nemo iure autem tenetur qui ad
+            libero blanditiis facere? Quas obcaecati delectus aut adipisci totam consequuntur tempora explicabo cumque aliquid
+            itaque, vero reiciendis fugiat.</div>
+        <div class="queerCard">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptate corporis nostrum optio illo
+            odit quaerat officiis asperiores impedit consequuntur praesentium eum error quos expedita beatae in ipsum,
+            dignissimos sint doloremque aspernatur omnis perferendis debitis velit iusto? Vitae sint beatae delectus ipsa, nemo
+            ipsum deleniti, culpa autem ut porro modi dicta illo corrupti minima quis eum nostrum, ipsam et non? Totam ea a
+            perferendis soluta ab corrupti ipsa iure veniam impedit consectetur quisquam optio, quae nihil temporibus unde vitae
+            quibusdam! Quo magnam incidunt cum labore eos, enim obcaecati blanditiis odit, ipsam, veritatis omnis? Quisquam
+            repellendus quam, repellat neque consectetur dignissimos illum saepe exercitationem nemo iure autem tenetur qui ad
+            libero blanditiis facere? Quas obcaecati delectus aut adipisci totam consequuntur tempora explicabo cumque aliquid
+            itaque, vero reiciendis fugiat.</div>
+        <div class="queerCard">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptate corporis nostrum optio illo
+            odit quaerat officiis asperiores impedit consequuntur praesentium eum error quos expedita beatae in ipsum,
+            dignissimos sint doloremque aspernatur omnis perferendis debitis velit iusto? Vitae sint beatae delectus ipsa, nemo
+            ipsum deleniti, culpa autem ut porro modi dicta illo corrupti minima quis eum nostrum, ipsam et non? Totam ea a
+            perferendis soluta ab corrupti ipsa iure veniam impedit consectetur quisquam optio, quae nihil temporibus unde vitae
+            quibusdam! Quo magnam incidunt cum labore eos, enim obcaecati blanditiis odit, ipsam, veritatis omnis? Quisquam
+            repellendus quam, repellat neque consectetur dignissimos illum saepe exercitationem nemo iure autem tenetur qui ad
+            libero blanditiis facere? Quas obcaecati delectus aut adipisci totam consequuntur tempora explicabo cumque aliquid
+            itaque, vero reiciendis fugiat.</div>
+        <div class="center">
+            <a class="queerButton" href="https://joram.eu" rel="noopener noreferrer"
+                target="_blank"><span class="hoverMe">🏳️&zwj;🌈</span> Link-Example 1 <span class="hoverMe">🏳️&zwj;🌈</span></a>
+            <a class="queerButton" href="https://joram.eu" rel="noopener noreferrer"
+                target="_blank">Link-Example 2 <span class="hoverMe">🏳️&zwj;🌈</span></a>
+        </div>
+    </main>
+    <footer>
+        <a  class="prideUnderscore" href="https://joram.eu/imp" rel="noopener noreferrer" target="_blank">Impressum und Datenschutzerklärung <span
+                class="hoverMe">🏳️&zwj;🌈</span></a>
+    </footer>
 </body>
+
 </html>
